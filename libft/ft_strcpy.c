@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmourdal <mmourdal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mparisse <mparisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 14:22:04 by mparisse          #+#    #+#             */
-/*   Updated: 2023/03/02 05:34:50 by mmourdal         ###   ########.fr       */
+/*   Created: 2023/03/09 09:19:57 by mparisse          #+#    #+#             */
+/*   Updated: 2023/03/09 09:20:00 by mparisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char const *s)
+char	*ft_strcpy_maxou(char *dest, char *src)
 {
-	int		i;
-	char	*str;
+	int	i;
 
 	i = 0;
-	str = malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (str == NULL)
-		return (0);
-	while (s[i])
+	while (src[i] != '\0')
 	{
-		str[i] = s[i];
+		dest[i] = src[i];
 		i++;
 	}
-	str[i] = '\0';
-	return ((char *)str);
+	dest[i] = '\0';
+	return (dest);
 }

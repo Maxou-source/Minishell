@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmourdal <mmourdal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 22:16:34 by mparisse          #+#    #+#             */
-/*   Updated: 2023/03/04 21:47:32 by mmourdal         ###   ########.fr       */
+/*   Created: 2023/03/09 09:40:37 by mparisse          #+#    #+#             */
+/*   Updated: 2023/03/21 20:36:32 by mmourdal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+char	*ft_strcat(const char *dest, const char *src)
 {
-	t_list	*last;
+	int		i;
+	int		j;
+	char	*new_dest;
+	char	*new_src;
 
-	if (!*lst)
-		*lst = new;
-	else
+	new_dest = (char *)dest;
+	new_src = (char *)src;
+	i = 0;
+	j = ft_strlen(new_dest);
+	while (new_src[i])
 	{
-		last = ft_lstlast(*lst);
-		last->next = new;
+		new_dest[j] = new_src[i];
+		i++;
+		j++;
 	}
+	new_dest[j] = '\0';
+	return (new_dest);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-	t_list *elem1;
-	t_list *elem2;
-
-	elem1 = ft_lstnew((void *)"lala");
-	elem2 = ft_lstnew((void *)"wesh");
-	//ft_lstadd_front(&elem1, elem2);
-	printf("%s", (char *)elem2->content);
-	//printf(
-}
-*/
