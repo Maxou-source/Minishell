@@ -63,16 +63,19 @@ typedef struct s_list_mini
 
 typedef struct s_tab_struct
 {
-	char				**commands;
+	// the command in clear
 	char				**split_command;
+	// the chained list
+	t_list_mini			*head;
+
+	// other variables used to build or exec
+	char				**commands;
 	int					type;
 	int					prev_heredocs;
-	t_list_mini			*head;
 }						t_tab_struct;
 
 typedef struct s_global
 {
-	char				**basic_env;
 	t_tab_struct		*struct_id;
 	t_ptr_array			personal_env;
 	char				**path;
