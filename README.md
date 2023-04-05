@@ -63,6 +63,8 @@ If I'm not on the first command the previous readable fd from the pipe becomes t
 	close(glo->link[1]);
 ```
 I need to thank @Mohazerro for comming up with this strategy and explaining it to me.
+
+
 #MINISHELL  (🇫🇷)
 
 Bienvenue sur repo github de Minishell! Minishell est l'un des projets les plus long et plus compliqué à 42 (à l'interieur du tronc commun).
