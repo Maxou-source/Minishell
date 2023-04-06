@@ -103,3 +103,11 @@ typedef struct s_tab_struct
 ```
 I have to thank @Mohazerro for comming up with this strategy.
 
+#MINISHELL  (🇩🇪)
+
+Willkommen in meinem Minishell-Github-Repository! Minishell ist (im Common Core) eines der schwierigsten und längsten Projekte im 42 Programm. 
+Ich habe dieses Projekt mit meinem Kumpel @Mousliiim gemacht.
+
+Das Ziel dieses Projekts ist es, eine Shell, wie zum Beispiel “Bash”, umzucodieren. Eine Shell ist ein Interface zwischen dem Benutzer und dem CPU-Kern. Wir haben dieses Projekt in C umcodiert, wobei ich die Ausführung gemacht habe, während Mouslim das Parsing gemacht hat. Wir haben auch weitere Aufgaben wie die Builtins, die Erweiterung, die Prompts und die Tokenisierung aufgeteilt.
+
+##Starten Sie das Projekt auf Ihrem Compute
