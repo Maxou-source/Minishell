@@ -11,6 +11,12 @@
     fun:add_history
 }
 {
+	leak execve
+	Memcheck:Leak
+	...
+	fun:execve
+}
+{
 	leak /usr/bin/grep
 	Memcheck:Leak
 	...

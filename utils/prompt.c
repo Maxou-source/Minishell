@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prompt.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmourdal <mmourdal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mparisse <mparisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 03:32:09 by mparisse          #+#    #+#             */
-/*   Updated: 2023/03/28 00:47:14 by mmourdal         ###   ########.fr       */
+/*   Updated: 2023/06/15 23:39:54 by mparisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static void	exec_cmd_git(t_prompt *prompt, char **cmd, int choice)
 	{
 		dup2(prompt->prev, STDIN_FILENO);
 		dupnclose(prompt->link[1], STDOUT_FILENO);
+		close(prompt->prev);
 	}
 	execve(cmd[0], (char **)cmd, NULL);
 	exit(0);
