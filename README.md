@@ -62,7 +62,7 @@ If I'm not on the first command the previous readable fd from the pipe becomes t
 	close(glo->link[0]);
 	close(glo->link[1]);
 ```
-I need to thank @Mohazerro for comming up with this strategy and explaining it to me.
+
 
 
 #MINISHELL  (🇫🇷)
@@ -101,7 +101,7 @@ typedef struct s_tab_struct
 	int					prev_heredocs;
 }						t_tab_struct;
 ```
-I have to thank @Mohazerro for comming up with this strategy.
+
 
 #MINISHELL  (🇩🇪)
 
